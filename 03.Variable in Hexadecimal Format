@@ -1,0 +1,11 @@
+using System;
+
+class ConvertedToHexadecimalFormat
+{
+    static void Main()
+    {
+        int intHex = 0xFE;
+        Console.WriteLine("{0}",intHex);
+    }
+}
+
