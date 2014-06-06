@@ -1,0 +1,14 @@
+using System;
+
+class CastingOfTypeStringInObject
+{
+    static void Main()
+    {
+        string strVar1 = "Hello ";
+        string strVar2 = "World";
+        object objVar = strVar1 + strVar2;
+        string strVar3 = (string)objVar;
+        Console.WriteLine(strVar3);
+    }
+}
+
