@@ -1,0 +1,33 @@
+using System;
+
+class CustomerDetailsInBank
+{
+    static void Main()
+    {
+        Console.Write("Enter first name:");
+        string firstName = Console.ReadLine();
+        Console.Write("Enter middle name:");
+        string middleName = Console.ReadLine();
+        Console.Write("Enter last name:");
+        string lastName = Console.ReadLine();
+        Console.Write("Enter balance:");
+        int intBalance =int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter bank Name");
+        string bankName = Console.ReadLine();
+        string IBAN = "BG27STSA93000019730665";
+        string creditCardNum1 = "9770 0031 7564 3326";
+        string creditCardNum2 = "5740 3401 527965130 ";
+        string creditCardNum3 = "6450 0021 6434 2215";
+        Console.WriteLine();
+        Console.WriteLine( firstName);
+        Console.WriteLine(middleName);
+        Console.WriteLine(lastName);
+        Console.WriteLine(intBalance);
+        Console.WriteLine(bankName);
+        Console.WriteLine(IBAN);
+        Console.WriteLine(creditCardNum1);
+        Console.WriteLine(creditCardNum2);
+        Console.WriteLine(creditCardNum3);
+    }
+}
+
