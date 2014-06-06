@@ -1,0 +1,32 @@
+using System;
+
+class ComparisonOfFloatingPointNumbers
+{
+    static void Main()
+    {
+        Console.WriteLine("Enter two numbers:");
+        double doubleA = double.Parse(Console.ReadLine());
+        double doubleB = double.Parse(Console.ReadLine());
+        double epsPrecision = 0.000001d;
+        if (Math.Abs(doubleA - doubleB)<epsPrecision)
+        {
+            Console.WriteLine("{0}", Math.Abs(doubleA - doubleB) < epsPrecision);
+            Console.WriteLine("The difference {0:F8}< eps", Math.Abs(doubleA - doubleB));
+        }
+        else
+        {
+            if ((float)Math.Abs(doubleA - doubleB) ==(float) epsPrecision)
+            {
+                Console.WriteLine("{0}", Math.Abs(doubleA - doubleB) < epsPrecision);
+                Console.WriteLine("Border case. The difference {0:F6} == eps.", Math.Abs(doubleA - doubleB));
+                Console.WriteLine("We consider the numbers are different.");
+            }
+            else if (Math.Abs(doubleA - doubleB) > epsPrecision)
+            {
+                Console.WriteLine("{0}", Math.Abs(doubleA - doubleB) < epsPrecision);
+                Console.WriteLine("The difference of {0} is too big (> eps)", Math.Abs(doubleA - doubleB));
+            }
+        }
+    }
+}
+
