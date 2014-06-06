@@ -1,0 +1,29 @@
+using System;
+using System.Text;
+
+class DrawingOfAnIsoscelesTriangle
+{
+    static void Main()
+    {
+        int n = 4;
+        int m = 7;
+        char ch = '\u00A9';
+        char [,]arr=new char[n,m];
+        for (int i = 0; i <n; i++)
+        {
+            for (int j = 0; j <m; j++)
+            {
+                arr[i,j]=' ';
+                if (arr[0, 3] ==' ' || arr[1, 2] ==' ' || arr[1, 4] ==' '||
+                  arr[2,1]==' '||arr[2,5]==' '||arr[3,0]==' '||arr[3,2]==' '||
+                  arr[3,4]==' '||arr[3,6]==' ')
+	            {
+		             arr[i,j]=ch;
+	            }
+                Console.Write(arr[i, j]);
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
