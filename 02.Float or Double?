@@ -1,0 +1,17 @@
+using System;
+
+class DetermineTheType
+{
+    static void Main()
+    {
+        double dDouble = 8923.1234857d;
+        double d2Double = 34.567839023d;
+        float fFloat = 12.345f;
+        float f1Float = 3456.091f;
+
+        Console.WriteLine("double {0}",dDouble);
+        Console.WriteLine("float {0}", fFloat);
+        Console.WriteLine("float {0}", f1Float);
+        Console.WriteLine("double {0}", d2Double);
+    }
+}
