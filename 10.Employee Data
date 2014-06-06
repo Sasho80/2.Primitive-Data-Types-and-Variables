@@ -1,0 +1,37 @@
+using System;
+
+class EmployeeInformation
+{
+    static void Main()
+    {
+        Console.Write("Enter first name:");
+        string firstName = Console.ReadLine();
+        Console.Write("Enter last name:");
+        string lastName = Console.ReadLine();
+        Console.Write("Enter ages:");
+        int intAge = int.Parse(Console.ReadLine());
+        if (intAge>100||intAge<0)
+        {
+            Console.WriteLine("The number is outside the range");
+            return;
+        }
+        Console.Write("Enter gender:");
+        string strGender = Console.ReadLine();
+        long iDNumber = 8306112507;
+        Console.Write("Unique employee number:");
+        int uniqueNum = int.Parse(Console.ReadLine());
+        if (uniqueNum<27560000||uniqueNum>27569999)
+        {
+            Console.WriteLine("The number is outside the range");
+            return;
+        }
+        Console.WriteLine();
+        Console.WriteLine(firstName);
+        Console.WriteLine(lastName);
+        Console.WriteLine(intAge);
+        Console.WriteLine(strGender);
+        Console.WriteLine(iDNumber);
+        Console.WriteLine(uniqueNum);
+    }
+}
+
