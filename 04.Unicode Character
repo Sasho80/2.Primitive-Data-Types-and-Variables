@@ -1,0 +1,10 @@
+using System;
+class TransformationASymbolUnicode
+    {
+        static void Main()
+        {
+            char charUnicode = '\u002A';
+            Console.WriteLine(charUnicode);
+        }
+    }
+
