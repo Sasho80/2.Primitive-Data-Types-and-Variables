@@ -1,0 +1,21 @@
+using System;
+
+class NullLiteral
+{
+    static void Main()
+    {
+        int? intNum1 = null;
+        double? doubleNum1=null;
+        Console.WriteLine("This is the integer with Null value -> "+ intNum1);
+        Console.WriteLine("This is the double with Null value -> "+ doubleNum1);
+        Console.WriteLine("This is the integer with Null value plus null literal->");
+        Console.Write(intNum1+null);
+        Console.WriteLine("This is the integer with Null value plus 5 -> ");
+        Console.Write(intNum1 + 5);
+        Console.WriteLine("This is the double with Null value plus null literal->");
+        Console.Write(doubleNum1+null);
+        Console.WriteLine("This is the double with Null value plus 5 -> " );
+        Console.Write(doubleNum1+5);
+    }
+}
+
