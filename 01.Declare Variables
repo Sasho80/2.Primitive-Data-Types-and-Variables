@@ -1,0 +1,20 @@
+using System;
+
+class InitializingVariables
+{
+    static void Main()
+    {
+      byte bByte=97;
+      sbyte sByte=-115;
+      short sShort = -10000;
+      ushort uShort = 52130;
+      int iInt = 4825932;
+
+      Console.WriteLine("byte {0}", bByte);
+      Console.WriteLine("sbyte {0}", sByte);
+      Console.WriteLine("short {0}", sShort);
+      Console.WriteLine("ushort {0}", uShort);
+      Console.WriteLine("int {0}", iInt);
+
+    }
+}
