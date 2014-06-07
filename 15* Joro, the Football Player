@@ -1,0 +1,28 @@
+using System;
+
+class GameFootballJoroYear
+{
+    static void Main()
+    {
+        string Year = Console.ReadLine();
+        int h= int.Parse(Console.ReadLine());
+        int p=int.Parse(Console.ReadLine());
+        double playsHolidays=(double)h/2;
+        double weekends=((52 - (double)p) * 2) / 3;
+        double Total = weekends + p + playsHolidays;
+        if (h<0||h>52)
+        {
+            throw new System.ArgumentOutOfRangeException();
+        }
+        if (p<0||p>300)
+        {
+            throw new System.ArgumentOutOfRangeException();
+        }
+        if (Year == "t")
+        {
+            Total = Total + 3;
+        }
+        Console.WriteLine((int)Total);
+    }
+}
+
