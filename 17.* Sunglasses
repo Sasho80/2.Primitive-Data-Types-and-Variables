@@ -1,0 +1,42 @@
+using System;
+
+class PrintSunglasses
+{
+    static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+        string freeSpace = new string(' ', n); ;
+        string line = new string('|', n) ;
+        int bridge = n / 2 + 1;
+        for (int i = 1; i <=n; i++)
+        {
+            if (i==1||i==n)
+            {
+              string asterisks = new string('*', 2*n);
+              Console.Write(asterisks+freeSpace+asterisks);
+              Console.WriteLine();
+            }
+            else if(i!=1||i!=n)
+            {
+                Console.Write('*');
+                string slash = new string('/',2*(n-1));
+                Console.Write(slash);
+                Console.Write('*');
+                if (i==bridge)
+                {
+                    Console.Write(line);
+                }
+                else if(i!=bridge)
+                {
+                    Console.Write(freeSpace);
+                }
+                Console.Write('*');
+                slash = new string('/', 2*(n - 1));
+                Console.Write(slash);
+                Console.Write('*');
+                Console.WriteLine();
+            }
+        }
+    }
+}
+
