@@ -1,42 +1,44 @@
 using System;
 
-class PrintSunglasses
+class Sunglasses
 {
     static void Main()
     {
-        int n = int.Parse(Console.ReadLine());
-        string freeSpace = new string(' ', n); ;
-        string line = new string('|', n) ;
-        int bridge = n / 2 + 1;
-        for (int i = 1; i <=n; i++)
+        int n=int.Parse(Console.ReadLine());
+        string asterisk=new string('*',2*n);
+        string emptySpace = new string(' ', n);
+        PrintFrames(asterisk, emptySpace);
+        Console.WriteLine();
+        string slashLens = new string('/',2*n-2);
+        string verticalBar = new string('|',n);
+        for (int i = 1; i < n-1; i++)
         {
-            if (i==1||i==n)
+            PrintLens(slashLens);
+            if ((n-1)/2==i)
             {
-              string asterisks = new string('*', 2*n);
-              Console.Write(asterisks+freeSpace+asterisks);
-              Console.WriteLine();
+               Console.Write(verticalBar);
             }
-            else if(i!=1||i!=n)
+            else
             {
-                Console.Write('*');
-                string slash = new string('/',2*(n-1));
-                Console.Write(slash);
-                Console.Write('*');
-                if (i==bridge)
-                {
-                    Console.Write(line);
-                }
-                else if(i!=bridge)
-                {
-                    Console.Write(freeSpace);
-                }
-                Console.Write('*');
-                slash = new string('/', 2*(n - 1));
-                Console.Write(slash);
-                Console.Write('*');
-                Console.WriteLine();
+                Console.Write(emptySpace);
             }
+            PrintLens(slashLens);
+            Console.WriteLine();
         }
+        PrintFrames(asterisk, emptySpace);
+        Console.WriteLine();
+    }
+    private static void PrintFrames(string asterisk, string emptySpace)
+    {
+        Console.Write(asterisk);
+        Console.Write(emptySpace);
+        Console.Write(asterisk);
+    }
+    private static void PrintLens(string slashLens)
+    {
+        Console.Write('*');
+        Console.Write(slashLens);
+        Console.Write('*');
     }
 }
 
