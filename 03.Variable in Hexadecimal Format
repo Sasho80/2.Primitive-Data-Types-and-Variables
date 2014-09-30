@@ -4,8 +4,8 @@ class ConvertedToHexadecimalFormat
 {
     static void Main()
     {
-        int intHex = 0xFE;
-        Console.WriteLine("{0}",intHex);
+        int numberInHex = 0xFE;
+        Console.WriteLine("{0}",numberInHex);
     }
 }
 
