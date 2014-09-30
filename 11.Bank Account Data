@@ -1,33 +1,37 @@
 using System;
 
-class CustomerDetailsInBank
+class BankAccountData
 {
     static void Main()
     {
-        Console.Write("Enter first name:");
+        Console.WriteLine("Enter first name account:");
         string firstName = Console.ReadLine();
-        Console.Write("Enter middle name:");
+        Console.WriteLine("Enter middle name account:");
         string middleName = Console.ReadLine();
-        Console.Write("Enter last name:");
+        Console.WriteLine("Enter last name account:");
         string lastName = Console.ReadLine();
-        Console.Write("Enter balance:");
-        int intBalance =int.Parse(Console.ReadLine());
-        Console.WriteLine("Enter bank Name");
+        Console.WriteLine("Enter balance account:");
+        int balance = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter bank name account:");
         string bankName = Console.ReadLine();
-        string IBAN = "BG27STSA93000019730665";
-        string creditCardNum1 = "9770 0031 7564 3326";
-        string creditCardNum2 = "5740 3401 527965130 ";
-        string creditCardNum3 = "6450 0021 6434 2215";
+        Console.WriteLine("Enter IBAN account:");
+        string iBAN = Console.ReadLine();
+        Console.WriteLine("Enter number of first credit card account:");
+        string firstCreditCard = Console.ReadLine();
+        Console.WriteLine("Enter number of second credit card account:");
+        string secondCreditCard = Console.ReadLine();
+        Console.WriteLine("Enter number of third credit card account:");
+        string thirdCreditCard = Console.ReadLine();
         Console.WriteLine();
-        Console.WriteLine( firstName);
-        Console.WriteLine(middleName);
-        Console.WriteLine(lastName);
-        Console.WriteLine(intBalance);
-        Console.WriteLine(bankName);
-        Console.WriteLine(IBAN);
-        Console.WriteLine(creditCardNum1);
-        Console.WriteLine(creditCardNum2);
-        Console.WriteLine(creditCardNum3);
+        Console.WriteLine("first name:{0}",firstName);
+        Console.WriteLine("middle name:{0}",middleName);
+        Console.WriteLine("last name:{0}",lastName);
+        Console.WriteLine("balance:{0}", balance);
+        Console.WriteLine("bank name:{0}",bankName);
+        Console.WriteLine("IBAN: {0}",iBAN);
+        Console.WriteLine("first credit card:{0}",firstCreditCard);
+        Console.WriteLine("second credit card:{0}", secondCreditCard);
+        Console.WriteLine("third credit card:{0}", thirdCreditCard);
     }
 }
 
