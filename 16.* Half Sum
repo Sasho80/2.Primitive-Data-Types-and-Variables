@@ -1,34 +1,31 @@
 using System;
 
-class DefferenceBetweenSums
+class HalfSum
 {
     static void Main()
     {
         int n = int.Parse(Console.ReadLine());
-        int sum1=0;
-        int sum2 = 0;
-        int[] arr1 = new int[n];
-        int[] arr2 = new int[n];
-            for (int i = 0; i < n; i++)
-            {
-                arr1[i] = int.Parse(Console.ReadLine());
-            }  
-             for (int j = 0; j < n; j++)
-            {
-                arr2[j] = int.Parse(Console.ReadLine());
-            }  
-        for (int i = 0, j=0; i < n||j<n; i++,j++)
-		{
-            sum1 = sum1 + arr1[i];
-            sum2 = sum2 + arr2[j];
-		}
-        if (sum1==sum2)
+        int numFirstNumber = 0;
+        int numSecondNumber = 0;
+        for (int i= 0; i<2*n; i++)
         {
-            Console.WriteLine("Yes, sum={0}",sum1);
+            int num=int.Parse(Console.ReadLine());
+            if (i<n)
+            {
+                numFirstNumber += num;
+            }
+            else
+            {
+                numSecondNumber += num;
+            }
         }
-        else if (sum1!=sum2)
+        if (numFirstNumber==numSecondNumber)
         {
-            Console.WriteLine("No, diff={0}",Math.Abs(sum1-sum2));   
+            Console.WriteLine("Yes, sum={0}", numFirstNumber);
+        }
+        else
+        {
+            Console.WriteLine("No, diff={0}", Math.Abs(numFirstNumber - numSecondNumber));
         }
     }
 }
