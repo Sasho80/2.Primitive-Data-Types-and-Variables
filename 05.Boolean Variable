@@ -4,18 +4,10 @@ class GenderDetermination
 {
     static void Main()
     {
-        Console.WriteLine("If your gender is Famale,");
-        Console.WriteLine("enter true or false:");
-        Boolean isFemale=Boolean.Parse(Console.ReadLine());
-
-        if (isFemale)
-        {
-            Console.WriteLine("Your gender is Female." );
-        }
-        else
-        {
-            Console.WriteLine("Your gender is Male.");
-        }
+        Console.WriteLine("Is your gender is female? Enter yes or no!");
+        string gender = Console.ReadLine();
+        bool isFemale=gender=="yes";
+        Console.WriteLine("{0}",isFemale);  
     }
 }
 
