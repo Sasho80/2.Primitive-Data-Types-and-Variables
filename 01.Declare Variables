@@ -4,17 +4,16 @@ class InitializingVariables
 {
     static void Main()
     {
-      byte bByte=97;
-      sbyte sByte=-115;
-      short sShort = -10000;
-      ushort uShort = 52130;
-      int iInt = 4825932;
-
-      Console.WriteLine("byte {0}", bByte);
-      Console.WriteLine("sbyte {0}", sByte);
-      Console.WriteLine("short {0}", sShort);
-      Console.WriteLine("ushort {0}", uShort);
-      Console.WriteLine("int {0}", iInt);
+        ushort varUShort = 52130;
+        sbyte varSByte = -115;
+        uint varUInt = 4825932;
+        byte varByte = 97;
+        int varInt = -10000;
+        Console.WriteLine("ushort={0}",varUShort);
+        Console.WriteLine("sbyte={0}", varSByte);
+        Console.WriteLine("uint={0}", varUInt);
+        Console.WriteLine("byte={0}", varByte);
+        Console.WriteLine("int={0}", varInt);
 
     }
 }
