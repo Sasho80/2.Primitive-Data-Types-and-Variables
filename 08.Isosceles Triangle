@@ -5,25 +5,45 @@ class DrawingOfAnIsoscelesTriangle
 {
     static void Main()
     {
-        int n = 4;
-        int m = 7;
-        char ch = '\u00A9';
-        char [,]arr=new char[n,m];
-        for (int i = 0; i <n; i++)
+       Console.OutputEncoding = Encoding.UTF8;
+        char copyRight = (char)169;
+        int nCopyRight = 0;
+        do
         {
-            for (int j = 0; j <m; j++)
+            Console.WriteLine("The number of the copyright symbol is larger than 2:");
+            Console.WriteLine("You must enter a number that is divisible by 3:");
+            nCopyRight = int.Parse(Console.ReadLine());
+            if (nCopyRight<2)
             {
-                arr[i,j]=' ';
-                if (arr[0, 3] ==' ' || arr[1, 2] ==' ' || arr[1, 4] ==' '||
-                  arr[2,1]==' '||arr[2,5]==' '||arr[3,0]==' '||arr[3,2]==' '||
-                  arr[3,4]==' '||arr[3,6]==' ')
-	            {
-		             arr[i,j]=ch;
-	            }
-                Console.Write(arr[i, j]);
+                Console.WriteLine("Number of copyright symbols is less than 2.");
+                return;
             }
+        } while (nCopyRight%3!=0);
+        int count = 1;
+        string emptySpace = new string(' ', nCopyRight/3);
+        Console.Write(emptySpace);
+        Console.Write("{0}", copyRight);
+        Console.Write(emptySpace);
+        Console.WriteLine();
+        for (int i = 1, j = 1; i < nCopyRight / 3; i++, j = j + 2)
+        {
+            emptySpace = new string(' ', nCopyRight / 3 - i);
+            Console.Write(emptySpace);
+            Console.Write("{0}", copyRight);
+            string emptySpaceMiddle = new string(' ', j);
+            Console.Write(emptySpaceMiddle);
+            Console.Write("{0}", copyRight);
+            Console.Write(emptySpace);
             Console.WriteLine();
+            count += 2;
         }
+        for (int i = 0; i < nCopyRight-count; i++)
+        {
+            Console.Write("{0}", copyRight);
+            string emptySpaceDown = new string(' ', 1);
+            Console.Write(emptySpaceDown);
+        }
+        Console.WriteLine();
     }
 }
 
