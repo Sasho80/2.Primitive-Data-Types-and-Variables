@@ -1,21 +1,17 @@
 using System;
 
-class NullLiteral
+class NullValuesArithmetic
 {
     static void Main()
     {
-        int? intNum1 = null;
-        double? doubleNum1=null;
-        Console.WriteLine("This is the integer with Null value -> "+ intNum1);
-        Console.WriteLine("This is the double with Null value -> "+ doubleNum1);
-        Console.WriteLine("This is the integer with Null value plus null literal->");
-        Console.Write(intNum1+null);
-        Console.WriteLine("This is the integer with Null value plus 5 -> ");
-        Console.Write(intNum1 + 5);
-        Console.WriteLine("This is the double with Null value plus null literal->");
-        Console.Write(doubleNum1+null);
-        Console.WriteLine("This is the double with Null value plus 5 -> " );
-        Console.Write(doubleNum1+5);
+        int? valueInt=null;
+        double? valueDouble = null;
+        Console.WriteLine(valueInt);
+        Console.WriteLine(valueDouble);
+        Console.WriteLine(valueInt+2);
+        Console.WriteLine(valueDouble + 2);
+        Console.WriteLine(valueInt + null);
+        Console.WriteLine(valueDouble + null);
     }
 }
 
