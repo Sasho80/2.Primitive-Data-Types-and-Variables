@@ -3,8 +3,8 @@ class TransformationASymbolUnicode
     {
         static void Main()
         {
-            char charUnicode = '\u002A';
-            Console.WriteLine(charUnicode);
+            char symbol = '\u002A';
+            Console.WriteLine("{0}",symbol);
         }
     }
 
