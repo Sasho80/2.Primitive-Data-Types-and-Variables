@@ -4,11 +4,12 @@ class CastingOfTypeStringInObject
 {
     static void Main()
     {
-        string strVar1 = "Hello ";
-        string strVar2 = "World";
-        object objVar = strVar1 + strVar2;
-        string strVar3 = (string)objVar;
-        Console.WriteLine(strVar3);
+        string greeting = "Hello";
+        string word = "World";
+        object varConcat1=greeting+" "+word;
+        string varConcat2=(string)varConcat1;
+        Console.WriteLine("{0}!",varConcat1);
+        Console.WriteLine("{0}!",varConcat2);
     }
 }
 
