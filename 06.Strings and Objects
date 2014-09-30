@@ -10,6 +10,7 @@ class CastingOfTypeStringInObject
         string varConcat2=(string)varConcat1;
         Console.WriteLine("{0}!",varConcat1);
         Console.WriteLine("{0}!",varConcat2);
+        
     }
 }
 
