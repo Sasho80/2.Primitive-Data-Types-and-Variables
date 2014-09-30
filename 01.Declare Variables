@@ -14,6 +14,5 @@ class InitializingVariables
         Console.WriteLine("uint={0}", varUInt);
         Console.WriteLine("byte={0}", varByte);
         Console.WriteLine("int={0}", varInt);
-
     }
 }
