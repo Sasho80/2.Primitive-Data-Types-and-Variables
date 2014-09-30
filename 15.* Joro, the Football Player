@@ -1,20 +1,20 @@
 using System;
 
-class GameFootballJoroYear
+class JoroTheFootballPlayer
 {
     static void Main()
     {
-        string Year = Console.ReadLine();
-        int h= int.Parse(Console.ReadLine());
-        int p=int.Parse(Console.ReadLine());
-        double playsHolidays=(double)h/2;
-        double weekends=((52 - (double)p) * 2) / 3;
-        double Total = weekends + p + playsHolidays;
-        if (Year == "t")
+        string kindOfYear = Console.ReadLine();
+        int p =int.Parse(Console.ReadLine());
+        int h = int.Parse(Console.ReadLine());
+        if (kindOfYear=="t")
         {
-            Total = Total + 3;
+            Console.WriteLine("{0}",h+((52-h)*2*1/3)+(p*1/2)+3); 
         }
-        Console.WriteLine((int)Total);
+        else if (kindOfYear=="f")
+        {
+            Console.WriteLine("{0}",h+((52-h)*2*1/3)+(p*1/2)); 
+        }
     }
 }
 
