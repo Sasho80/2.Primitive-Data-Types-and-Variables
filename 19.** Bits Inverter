@@ -14,7 +14,7 @@ class BitsInverter
         {
             Byte[i] =int.Parse(Console.ReadLine());
         }
-        for (int step = 1, k=0,j=0; step< n*8; step=1+k*numStep)
+        for (int step = 1, k=0,j=0; step<=n*8; step=1+k*numStep)
         {
             m = j;
             int nRightP = Byte[j] >> Math.Abs(step - countByte);
@@ -44,9 +44,18 @@ class BitsInverter
                 k++;
                 j++;
             }
-            if ((step + numStep) >= countByte)
+            if ((step + numStep) >= countByte && (numStep)<=16)
             {
                 countByte += 8;
+            }
+            else
+            {
+                if (j<n)
+                {
+                    Console.WriteLine(result);
+                }
+                countByte += 16;
+                j++;
             }
         }
     }
